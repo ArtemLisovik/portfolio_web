@@ -1,0 +1,172 @@
+
+h1 {
+    position: relative;
+    padding: 10px 20px;
+}
+
+
+
+h2 {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin-top: calc(5px + 15 * (100vw / 1440));
+    font-weight: 400;
+    padding: 10px 40px;
+
+}
+
+.header__menu-list1 {
+    animation: menu 1.2s ease-out;
+}
+
+.header__menu-list2 {
+    animation: menu 1.2s ease-out;
+
+}
+
+@keyframes mouse {
+    0% {
+        transform: translateY(25px);
+        opacity: 0;
+    }
+
+    50% {
+        /* display: block; */
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+// @media (max-width: 800px) {
+//     .info__logo {
+//     }
+// }
+
+.info__socials {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+}
+
+
+.social__link {
+    display: flex;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-out;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.social__link:hover{
+    opacity: 1
+}
+
+.telegram:hover {
+    background: #0088cc;
+}
+
+.telegram:hover .socials__icon {
+    opacity: 1;
+}
+
+
+.facebook:hover {
+    background-color: #2b4170;
+    background: -moz-linear-gradient(top, #3b5998, #2b4170);
+    background: -ms-linear-gradient(top, #3b5998, #2b4170);
+    background: -webkit-linear-gradient(top, #3b5998, #2b4170);
+}
+
+.facebook:hover .socials__icon {
+    opacity: 1;
+}
+
+
+.linkedin:hover {
+    background: #1565c0;
+}
+.linkedin:hover .socials__icon {
+    opacity: 1;
+}
+
+
+.instagram:hover {
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+}
+.instagram:hover .socials__icon {
+    opacity: 1;
+}
+
+
+.info__socials img {
+    display: block;
+    width: 30px;
+    height: 30px;
+    opacity: 0.5;
+    transition: all 0.3s ease-out;
+}
+
+#first {
+    animation: socials 1.5s ease;
+}
+
+#second {
+    animation: socials 1.8s ease;
+}
+
+#third {
+    animation: socials 2.1s ease;
+}
+
+#fourth {
+    animation: socials 2.4s ease;
+}
+
+
+@media (max-width: 700px) {
+    .info__socials {
+        top: 26%
+    }
+
+    .info__socials a {
+        margin-bottom: 4px;
+    }
+}
+
+
+.main__button {
+    position: fixed;
+    top: 90%;
+    right: -10%;
+    z-index: 999;
+    // box-shadow: 0 0 15px rgba(0, 0, 0, 0.627);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        right: 3%;
+
+
+    }
+}
+

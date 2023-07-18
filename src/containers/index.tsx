@@ -1,0 +1,6 @@
+export {Header} from './Header/Header'
+export {Footer} from './Footer/Footer'
+export {Menu} from './Menu/Menu'
+export {Form} from './Form/Form'
+export {Logo} from './Logo/Logo'
+export {Promo} from './Promo/Promo'

@@ -1,0 +1,29 @@
+.title {
+    position: relative;
+    text-align: center;
+    font-size: calc(13px + 19 * (100vw / 1440));
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 50px 0;
+    display: inline-block;
+    background-image: linear-gradient(#fff, #fff);
+    background-position: center 100%;
+    background-repeat: no-repeat;
+    background-size: 60% 2px;
+    padding-bottom: calc(13px + 19 * (100vw / 1440));
+}
+
+.object__wrapper-anim {
+    position: absolute;
+    background-color: black;
+    width: 110%;
+    height: 110%;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.object__wrapper-anim._active{
+    animation: objects_reveal 1.9s cubic-bezier(.75,.01,.5,1.01);
+    animation-fill-mode: forwards;
+}
