@@ -34,15 +34,15 @@ export const Promo = () => {
 
                     </div>
                     <h1 className="info__title">
-                        <span className="info__title-text">Lisovik Artem</span>
+                        <span className="info__title-text">Artem Lisovik</span>
                         <span className="info__title-wrapper"></span>
                     </h1>
                     <h2 className="info__subtitle">
-                        <span className="info__subtitle-text">Разработка сайтов любой сложности</span>
+                        <span className="info__subtitle-text">Студия веб-разработки</span>
                         <span className="info__subtitle-wrapper"></span>
                     </h2>
                     <div className="info__subtitle-price">
-                        <span className="info__subtitle-price-text"></span>
+                        <span className="info__subtitle-price-text">Создание сайтов любой сложности</span>
                         {/* <div className="info__subtitle-button">Заказать</div> */}
                         <Button>Заказать сайт</Button>
                     </div>

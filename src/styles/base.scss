@@ -40,10 +40,12 @@ body._lock {
 }
 
 .main {
+    position: relative;
     flex: 1 1 auto;
     z-index: 10;
-    margin-bottom: 350px;
+    margin-bottom: 407px;
     background: url('../../src/assets/img/cover_bg_2.webp') 20% 50%/90% no-repeat fixed;
+    background-color: black;
 }
 
 section {
@@ -53,3 +55,14 @@ section {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.559);
 }
 
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

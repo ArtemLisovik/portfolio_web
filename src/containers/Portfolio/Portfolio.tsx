@@ -17,9 +17,9 @@ import { H2 } from 'ui'
 
 export const Portfolio = () => {
     return (
-        <section className="portfolio">
+        <section className="portfolio" id='portfolio'>
             <div className="portfolio__container">
-                <H2>Портфолио</H2>
+                <H2>Наши проекты</H2>
                 <div className="portfolio__examples">
 
                 <PortfolioItem
