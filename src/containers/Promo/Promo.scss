@@ -1,6 +1,11 @@
 .info {
-    background: transparent;
+    // background: black;
+    background: url('../../../src/assets/img/cover_bg_2.webp') 28%/90% no-repeat fixed;
     height: 86vh;
+    @media (max-width: 805px) {
+        background: url('../../../src/assets/img/cover_bg_2.webp') 54.5%/220% no-repeat fixed;
+
+    }
 }
 
 .info__sub-wrapper {

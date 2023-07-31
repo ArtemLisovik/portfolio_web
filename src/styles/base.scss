@@ -44,13 +44,13 @@ body._lock {
     flex: 1 1 auto;
     z-index: 10;
     margin-bottom: 407px;
-    background: url('../../src/assets/img/cover_bg_2.webp') 28%/90% no-repeat fixed;
+    // background: url('../../src/assets/img/cover_bg_2.webp') 28%/90% no-repeat fixed;
     background-color: black;
 
-    @media (max-width: 805px) {
-        background: url('../../src/assets/img/cover_bg_2.webp') 54.5%/220% no-repeat fixed;
+    // @media (max-width: 805px) {
+    //     background: url('../../src/assets/img/cover_bg_2.webp') 54.5%/220% no-repeat fixed;
 
-    }
+    // }
 }
 
 section {
