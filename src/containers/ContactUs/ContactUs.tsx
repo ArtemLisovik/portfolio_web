@@ -24,7 +24,6 @@ export const ContactUs = () => {
 
     const onHandleSubmit: SubmitHandler<IData> = async (data) => {
         console.log(data)
-        // sendMessageTelegram(data)
     }
     return (
         <section className="contact-form" id='contactUs'>

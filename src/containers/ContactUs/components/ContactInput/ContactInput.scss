@@ -44,5 +44,9 @@
   .form-input__wrapper input:valid + .label-name::after {
     transform: translateX(0%);
   }
+
+  .label-name {
+    line-height: 1.2;
+  }
   
   
