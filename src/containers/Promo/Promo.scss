@@ -1,9 +1,18 @@
 .info {
-    // background: black;
-    background: url('../../../src/assets/img/cover_bg_2.webp') 28%/90% no-repeat fixed;
+    background: url('../../../src/assets/img/cover_bg_2.webp') 65%/120% no-repeat fixed;
     height: 86vh;
-    @media (max-width: 805px) {
-        background: url('../../../src/assets/img/cover_bg_2.webp') 54.5%/220% no-repeat fixed;
+    position: relative;
+    z-index: 50;
+    @media (max-width: 855px) {
+        background: url('../../../src/assets/img/cover_bg_2.webp') 54%/220% no-repeat fixed;
+
+    }
+    @media (min-width: 1135px) {
+        background: url('../../../src/assets/img/cover_bg_2.webp') 30%/90% no-repeat fixed;
+
+    }
+    @media (min-width: 1666px) {
+        background: url('../../../src/assets/img/cover_bg_2.webp') 46%/60% no-repeat fixed;
 
     }
 }

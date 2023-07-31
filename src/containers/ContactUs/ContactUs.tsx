@@ -64,7 +64,7 @@ export const ContactUs = () => {
                         </FormProvider>
 
                     </div>
-                    <div className="contact-form__info info">
+                    <div className="contact-form__info">
                         <div className="contacts__block email">
                             <p className="contacts__title">e-mail</p>
                             <p className="contacts__item">Artemlisovik@icloud.com</p>
