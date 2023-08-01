@@ -5,7 +5,7 @@
     padding: 12px 25px;
     font-size: 16px;
     font-weight: 500;
-    border: 1px solid var(--color-active);
+    // border: 1px solid var(--color-active);
     position: relative;
     overflow: hidden;
     font-weight: 600;
@@ -16,9 +16,11 @@
     backdrop-filter: blur(5px);
 
     &:hover{
-        box-shadow: 0 0 5px var(--color-active),
-        inset 0 0 5px var(--color-active);
-        transform: scale(1.05);
+        // box-shadow: 0 0 5px var(--color-active),
+        // inset 0 0 5px var(--color-active);
+        // transform: scale(1.05);
+        // border: 0.5px solid var(--color-active);
+        // background: ;
     }
 
     &::after {
@@ -35,6 +37,6 @@
     }
 
     &:hover::after{
-        background: transparent;
+        background: #d63447;
     }
 }
