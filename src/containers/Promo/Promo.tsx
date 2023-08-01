@@ -33,12 +33,19 @@ export const Promo = () => {
                             Заказать сайт
                         </Link>
                     </div>
-                    <a href="" className="info__scroll-link" data-section=".portfolio">
-                        <span className="info__mouse">
+                    
+                    <Link
+                    to="portfolio"
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={0}
+                    className="info__scroll-link">
+                      <span className="info__mouse">
                             <span className="info__mouse-scroll"></span>
                         </span>
                         <span className="info__mouse-text">Scroll</span>
-                    </a>
+                </Link>
                 </div>
             </div>
         </section>

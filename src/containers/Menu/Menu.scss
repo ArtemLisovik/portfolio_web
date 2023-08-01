@@ -125,8 +125,6 @@
     }
 
     &__wrapper {
-        opacity: 0;
-        visibility: hidden;
         z-index: 50;
         position: absolute;
         left: 0;
@@ -138,19 +136,13 @@
         height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        padding-top: 17vh;
         align-items: center;
         gap: 40px;
         font-size: 34px;
         font-weight: 600;
         transition: all 0.3s ease;
     }
-
-    &__wrapper.active {
-        opacity: 1;
-        visibility: visible;
-    }
-
     &__link {
         transition: all 0.3s ease;
     }

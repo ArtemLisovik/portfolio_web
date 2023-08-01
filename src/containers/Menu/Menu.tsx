@@ -5,6 +5,8 @@ import './Menu.scss'
 
 import { menuConfig } from './config/menuConfig'
 import { Link } from 'react-scroll'
+import { AnimatePresence, motion } from 'framer-motion'
+import { textAnimation, titleAnimation } from 'config/animation'
 
 export type menuType = 'ua' | 'ru' | 'en'
 
@@ -162,64 +164,113 @@ const BurgerMenu = () => {
                 </svg>
             </div>
 
-            <nav className={`burger-menu__wrapper ${menuActive ? 'active' : ''}`}>
+            <AnimatePresence>
+                {menuActive && <motion.nav 
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                exit={{opacity: 0}}
+                transition={{duration: 0.2}}
+                className='burger-menu__wrapper'>
 
-                <Link
-                    onClick={burgerMenuHandler}
-                    to="portfolio"
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration={0}
-                    className="burger-menu__link">
-                    Наши проекты
-                </Link>
+                    <motion.div
+                        className="burger-menu__link-wrapper"
+                        initial='hidden'
+                        animate='visible'
+                        viewport={{ amount: 0.6, once: true }}
+                        variants={titleAnimation}
+                        custom={0}>
+                        <Link
+                            onClick={burgerMenuHandler}
+                            to="portfolio"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={0}
+                            className="burger-menu__link">
+                            Наши проекты
+                        </Link>
+                    </motion.div>
 
-                <Link
-                    onClick={burgerMenuHandler}
-                    to="about"
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration={0}
-                    className="burger-menu__link">
-                    О нас
-                </Link>
 
-                <Link
-                    onClick={burgerMenuHandler}
-                    to="services"
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration={0}
-                    className="burger-menu__link">
-                    Наши услуги
-                </Link>
+                    <motion.div
+                        className="burger-menu__link-wrapper"
+                        initial='hidden'
+                        animate='visible'
+                        viewport={{ amount: 0.6, once: true }}
+                        variants={titleAnimation}
+                        custom={0.05}>
+                        <Link
+                            onClick={burgerMenuHandler}
+                            to="about"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={0}
+                            className="burger-menu__link">
+                            О нас
+                        </Link>
+                    </motion.div>
 
-                <Link
-                    onClick={burgerMenuHandler}
-                    to="contactUs"
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration={0}
-                    className="burger-menu__link">
-                    Заказать
-                </Link>
+                    <motion.div
+                        className="burger-menu__link-wrapper"
+                        initial='hidden'
+                        animate='visible'
+                        viewport={{ amount: 0.6, once: true }}
+                        variants={titleAnimation}
+                        custom={0.1}>
+                        <Link
+                            onClick={burgerMenuHandler}
+                            to="services"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={0}
+                            className="burger-menu__link">
+                            Наши услуги
+                        </Link>
+                    </motion.div>
 
-                <Link
-                    onClick={burgerMenuHandler}
-                    to="footer"
-                    spy={true}
-                    smooth={true}
-                    offset={5500}
-                    duration={0}
-                    className="burger-menu__link">
-                    Сотрудничество
-                </Link>
-              
-            </nav>
+                    <motion.div
+                        className="burger-menu__link-wrapper"
+                        initial='hidden'
+                        animate='visible'
+                        viewport={{ amount: 0.6, once: true }}
+                        variants={titleAnimation}
+                        custom={0.15}>
+                        <Link
+                            onClick={burgerMenuHandler}
+                            to="contactUs"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={0}
+                            className="burger-menu__link">
+                            Заказать
+                        </Link>
+                    </motion.div>
+
+                    <motion.div
+                        className="burger-menu__link-wrapper"
+                        initial='hidden'
+                        animate='visible'
+                        viewport={{ amount: 0.6, once: true }}
+                        variants={titleAnimation}
+                        custom={0.2}>
+                        <Link
+                            onClick={burgerMenuHandler}
+                            to="footer"
+                            spy={true}
+                            smooth={true}
+                            offset={9000}
+                            duration={0}
+                            className="burger-menu__link">
+                            Сотрудничество
+                        </Link>
+                    </motion.div>
+
+                </motion.nav>}
+            </AnimatePresence>
+
         </div>
 
     )
