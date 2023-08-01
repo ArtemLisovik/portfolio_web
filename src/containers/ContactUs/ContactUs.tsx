@@ -7,7 +7,6 @@ import { IData } from 'types/IData'
 import { schema } from './helpers/schema'
 
 import './ContactUs.scss'
-import { sendMessageTelegram } from './helpers/telegram'
 import { ContactTextArea } from './components/ContactTextArea/ContactTextArea'
 import { Paragraph } from 'ui'
 
@@ -72,7 +71,7 @@ export const ContactUs = () => {
                         </div>
                         <div className="contacts__block phone">
                             <p className="contacts__title">Телефон</p>
-                            <a href="tel:+38073173357" className="contacts__item">+380 73 17 333 57</a>
+                            <a href="tel:+380930545387" className="contacts__item">+380 93 054 53 87</a>
                             <span className="object__wrapper-anim"></span>
                         </div>
                         <div className="contacts__block location">

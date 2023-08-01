@@ -51,7 +51,7 @@ export const MainPage = () => {
 
 
                 <div className="socials">
-                    <a href="https://t.me/trendsetterl" className="social__link telegram" target="_blank">
+                    <a href="https://t.me/Artem_lead" className="social__link telegram" target="_blank">
                         <svg width="27px" height="27px" fill="white" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" xmlSpace="preserve" style={{
                             fillRule: 'evenodd',
                             clipRule: 'evenodd',
