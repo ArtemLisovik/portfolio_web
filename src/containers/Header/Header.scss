@@ -4,6 +4,15 @@
     width: 100%;
     top: 0%;
     left: 0%;
+
+    @media (max-width: 853px) {
+        position: fixed;
+        left: 0;
+        top: 0;
+        background: #292828c4;
+        backdrop-filter: blur(8px);
+        height: 60px;
+    }
 }
 
 .header__nav {
