@@ -29,7 +29,7 @@ export const ContactUs = () => {
         <section className="contact-form" id='contactUs'>
             <div className="contact-form__container">
                 <div className="about-me__title-wrapper title-wrapper">
-                    <h3 className="about-me__title title">Расчитать стоимось
+                    <h3 className="about-me__title title">Рассчитать стоимось
                         <span className="object__wrapper-anim"></span>
                     </h3>
                 </div>

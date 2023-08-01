@@ -8,6 +8,7 @@ import { Logo } from 'containers'
 import {DesktopMenu} from 'containers/Menu/Menu'
 
 import './Footer.scss'
+import { Paragraph } from 'ui';
 
 export const Footer = () => {
 
@@ -30,11 +31,16 @@ export const Footer = () => {
     }, [])
 
   return (
-    <footer className="footer">
+    <footer className="footer" id='footer'>
     <div className="footer__container">
         <h3 className="footer__title title">Socials
             <span className="footer__wrapper-anim footer__anim"></span>
         </h3>
+        
+        <div className='footer__text'>
+            <Paragraph background='gray'>По вопросам сотрудничества - пишите через удобный для вас канал связи!</Paragraph>
+        </div>
+        
         <div className="info__socials-footer">
             <span className="footer__wrapper-anim footer__anim"></span>
 

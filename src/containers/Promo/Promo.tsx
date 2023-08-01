@@ -1,5 +1,6 @@
 import { Button } from 'ui/Button/Button'
 import './Promo.scss'
+import { Link } from 'react-scroll'
 
 
 
@@ -9,8 +10,8 @@ export const Promo = () => {
         <section className="info">
             <div className="info__logo">
                 <div className="info__container">
-                    
-                    
+
+
                     <h1 className="info__title">
                         <span className="info__title-text">Artem Lisovik</span>
                         <span className="info__title-wrapper"></span>
@@ -22,7 +23,15 @@ export const Promo = () => {
                     <div className="info__subtitle-price">
                         <span className="info__subtitle-price-text">Создание сайтов любой сложности</span>
                         {/* <div className="info__subtitle-button">Заказать</div> */}
-                        <Button>Заказать сайт</Button>
+                        <Link
+                            to="contactUs"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={0}
+                            className="button__main">
+                            Заказать сайт
+                        </Link>
                     </div>
                     <a href="" className="info__scroll-link" data-section=".portfolio">
                         <span className="info__mouse">

@@ -101,7 +101,6 @@ export const DesktopMenu = () => {
                     </Link>
                     </li>
                     
-                {/* <li className="menu__item"><a href="" data-section=".contact-form" className="menu__link link">Условия сотрудничества</a></li> */}
 
                 <li className="menu__item">
                 <Link
@@ -111,11 +110,21 @@ export const DesktopMenu = () => {
                         offset={0}
                         duration={0}
                         className="menu__link link">
-                        Расчитать стоимость
+                        Рассчитать стоимость
                     </Link>
                 </li>
 
-                <li className="menu__item"><a href="" data-section=".footer" className="menu__link link">Партнерство и сотрудничество</a></li>
+                <li className="menu__item">
+                <Link
+                        to="footer"
+                        spy={true}
+                        smooth={true}
+                        offset={4500}
+                        duration={0}
+                        className="menu__link link">
+                        Партнерство и сотрудничество
+                    </Link>
+                </li>
 
             </ul>
         </nav>

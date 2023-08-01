@@ -83,7 +83,7 @@ export const MainPage = () => {
                         offset={0}
                         duration={0}
                         className="button__main">
-                        Расчитать стоимость
+                        Рассчитать стоимость
                     </Link>
                     {/* <Button>Расчитать стоимость</Button> */}
                 </div>

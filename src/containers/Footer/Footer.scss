@@ -1,5 +1,5 @@
 
-footer {
+.footer {
     background-color: #191919;
     margin: 0 auto;
     width: 100%;
@@ -10,6 +10,10 @@ footer {
     z-index: 5;
     text-align: center;
     // padding-top: 60px;
+
+    &__text {
+        margin-bottom: 20px;
+    }
 }
 
 .footer .title__wrapper-anim {
@@ -40,7 +44,7 @@ footer a {
 }
 
 .footer__copyright {
-    margin-top: 70px;
+    margin-top: 50px;
     color: rgba(255, 255, 255, 0.5);
     font-size: 16px;
     line-height: 30px;

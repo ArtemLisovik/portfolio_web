@@ -21,6 +21,7 @@
         // transform: scale(1.05);
         // border: 0.5px solid var(--color-active);
         // background: ;
+        transform: scale(1.05);
     }
 
     &::after {
@@ -37,6 +38,6 @@
     }
 
     &:hover::after{
-        background: #d63447;
+        background: #a42635;
     }
 }
