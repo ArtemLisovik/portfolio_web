@@ -13,7 +13,7 @@ export const titleAnimation = {
   
   export const textAnimation = {
     hidden: {
-        y: '-50px',
+        y: '50px',
         opacity: 0
     },
     visible: (custom: number) => ({

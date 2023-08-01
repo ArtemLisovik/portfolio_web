@@ -7,6 +7,7 @@ import { menuConfig } from './config/menuConfig'
 import { Link } from 'react-scroll'
 import { AnimatePresence, motion } from 'framer-motion'
 import { textAnimation, titleAnimation } from 'config/animation'
+import { Logo } from 'ui'
 
 export type menuType = 'ua' | 'ru' | 'en'
 
@@ -148,7 +149,7 @@ const BurgerMenu = () => {
 
     return (
         <div className="burger-menu">
-
+            <Logo/>
             <div className="burger-menu__button">
                 <svg className={`ham ham6 ${menuActive ? 'active' : ''}`} viewBox="0 0 100 100" width="60" onClick={burgerMenuHandler}
                 >
@@ -164,111 +165,114 @@ const BurgerMenu = () => {
                 </svg>
             </div>
 
-            <AnimatePresence>
-                {menuActive && <motion.nav 
-                initial={{opacity: 0}}
-                animate={{opacity: 1}}
-                exit={{opacity: 0}}
-                transition={{duration: 0.2}}
-                className='burger-menu__wrapper'>
+            <AnimatePresence mode='wait'   >
+                <motion.nav
+                    // initial={{maxHeight: '0px'}}
+                    // animate={{maxHeight: '100vh'}}
+                    // exit={{maxHeight: '0px'}}
+                    // transition={{duration: 0.2}}
+                    className={`burger-menu__wrapper ${menuActive ? 'active' : ''}`}>
 
-                    <motion.div
-                        className="burger-menu__link-wrapper"
-                        initial='hidden'
-                        animate='visible'
-                        viewport={{ amount: 0.6, once: true }}
-                        variants={titleAnimation}
-                        custom={0}>
-                        <Link
-                            onClick={burgerMenuHandler}
-                            to="portfolio"
-                            spy={true}
-                            smooth={true}
-                            offset={0}
-                            duration={0}
-                            className="burger-menu__link">
-                            Наши проекты
-                        </Link>
-                    </motion.div>
+                    {menuActive && <div className='burger-menu__inner'>
+                        <motion.div
+                            className="burger-menu__link-wrapper"
+                            initial='hidden'
+                            animate='visible'
+                            viewport={{ amount: 0.6 }}
+                            variants={titleAnimation}
+                            custom={0}>
+                            <Link
+                                onClick={burgerMenuHandler}
+                                to="portfolio"
+                                spy={true}
+                                smooth={true}
+                                offset={0}
+                                duration={0}
+                                className="burger-menu__link">
+                                Наши проекты
+                            </Link>
+                        </motion.div>
 
+                        <motion.div
+                            className="burger-menu__link-wrapper"
+                            initial='hidden'
+                            animate='visible'
+                            viewport={{ amount: 0.6, once: true }}
+                            variants={titleAnimation}
+                            custom={0.05}>
+                            <Link
+                                onClick={burgerMenuHandler}
+                                to="about"
+                                spy={true}
+                                smooth={true}
+                                offset={0}
+                                duration={0}
+                                className="burger-menu__link">
+                                О нас
+                            </Link>
+                        </motion.div>
 
-                    <motion.div
-                        className="burger-menu__link-wrapper"
-                        initial='hidden'
-                        animate='visible'
-                        viewport={{ amount: 0.6, once: true }}
-                        variants={titleAnimation}
-                        custom={0.05}>
-                        <Link
-                            onClick={burgerMenuHandler}
-                            to="about"
-                            spy={true}
-                            smooth={true}
-                            offset={0}
-                            duration={0}
-                            className="burger-menu__link">
-                            О нас
-                        </Link>
-                    </motion.div>
+                        <motion.div
+                            className="burger-menu__link-wrapper"
+                            initial='hidden'
+                            animate='visible'
+                            viewport={{ amount: 0.6, once: true }}
+                            variants={titleAnimation}
+                            custom={0.1}>
+                            <Link
+                                onClick={burgerMenuHandler}
+                                to="services"
+                                spy={true}
+                                smooth={true}
+                                offset={0}
+                                duration={0}
+                                className="burger-menu__link">
+                                Наши услуги
+                            </Link>
+                        </motion.div>
 
-                    <motion.div
-                        className="burger-menu__link-wrapper"
-                        initial='hidden'
-                        animate='visible'
-                        viewport={{ amount: 0.6, once: true }}
-                        variants={titleAnimation}
-                        custom={0.1}>
-                        <Link
-                            onClick={burgerMenuHandler}
-                            to="services"
-                            spy={true}
-                            smooth={true}
-                            offset={0}
-                            duration={0}
-                            className="burger-menu__link">
-                            Наши услуги
-                        </Link>
-                    </motion.div>
+                        <motion.div
+                            className="burger-menu__link-wrapper"
+                            initial='hidden'
+                            animate='visible'
+                            viewport={{ amount: 0.6, once: true }}
+                            variants={titleAnimation}
+                            custom={0.15}>
+                            <Link
+                                onClick={burgerMenuHandler}
+                                to="contactUs"
+                                spy={true}
+                                smooth={true}
+                                offset={0}
+                                duration={0}
+                                className="burger-menu__link">
+                                Заказать
+                            </Link>
+                        </motion.div>
 
-                    <motion.div
-                        className="burger-menu__link-wrapper"
-                        initial='hidden'
-                        animate='visible'
-                        viewport={{ amount: 0.6, once: true }}
-                        variants={titleAnimation}
-                        custom={0.15}>
-                        <Link
-                            onClick={burgerMenuHandler}
-                            to="contactUs"
-                            spy={true}
-                            smooth={true}
-                            offset={0}
-                            duration={0}
-                            className="burger-menu__link">
-                            Заказать
-                        </Link>
-                    </motion.div>
+                        <motion.div
+                            className="burger-menu__link-wrapper"
+                            initial='hidden'
+                            animate='visible'
+                            viewport={{ amount: 0.6, once: true }}
+                            variants={titleAnimation}
+                            custom={0.2}>
+                            <Link
+                                onClick={burgerMenuHandler}
+                                to="footer"
+                                spy={true}
+                                smooth={true}
+                                offset={9000}
+                                duration={0}
+                                className="burger-menu__link">
+                                Сотрудничество
+                            </Link>
+                        </motion.div>
+                    </div>
 
-                    <motion.div
-                        className="burger-menu__link-wrapper"
-                        initial='hidden'
-                        animate='visible'
-                        viewport={{ amount: 0.6, once: true }}
-                        variants={titleAnimation}
-                        custom={0.2}>
-                        <Link
-                            onClick={burgerMenuHandler}
-                            to="footer"
-                            spy={true}
-                            smooth={true}
-                            offset={9000}
-                            duration={0}
-                            className="burger-menu__link">
-                            Сотрудничество
-                        </Link>
-                    </motion.div>
+                    }
 
-                </motion.nav>}
+                </motion.nav>
             </AnimatePresence>
 
         </div>

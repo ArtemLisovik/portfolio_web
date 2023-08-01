@@ -1,7 +1,6 @@
 export {Header} from './Header/Header'
 export {Footer} from './Footer/Footer'
 export {Menu} from './Menu/Menu'
-export {Logo} from './Logo/Logo'
 export {Promo} from './Promo/Promo'
 export {About} from './About/About'
 export {Services} from './Services/Services'

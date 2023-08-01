@@ -3,8 +3,6 @@ import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { DocumentData, doc, getDoc} from "firebase/firestore"; 
 
-import {db} from 'config/firebase'
-import { Logo } from 'containers'
 import {DesktopMenu} from 'containers/Menu/Menu'
 
 import './Footer.scss'

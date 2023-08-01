@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Logo, Menu } from 'containers'
+import { Menu } from 'containers'
 import { MySelect } from 'ui/Select/Select'
 
 

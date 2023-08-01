@@ -7,7 +7,7 @@ import { Link } from 'react-scroll'
 export const Promo = () => {
 
     return (
-        <section className="info">
+        <section className="info" id='promo'>
             <div className="info__logo">
                 <div className="info__container">
 
