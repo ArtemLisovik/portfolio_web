@@ -3,12 +3,17 @@ import { ContactInput } from './components/ContactInput/ContactInput'
 import { yupResolver } from "@hookform/resolvers/yup"
 
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 import { IData } from 'types/IData'
 import { schema } from './helpers/schema'
 
 import './ContactUs.scss'
 import { ContactTextArea } from './components/ContactTextArea/ContactTextArea'
 import { Paragraph } from 'ui'
+import { sendMessageTelegram } from './helpers/telegram'
 
 
 
@@ -19,16 +24,28 @@ export const ContactUs = () => {
         reValidateMode: 'onChange',
     })
 
-    const { handleSubmit, formState: { errors } } = methods
+    const { handleSubmit, reset, formState: { errors } } = methods
 
     const onHandleSubmit: SubmitHandler<IData> = async (data) => {
-        console.log(data)
+        sendMessageTelegram(data)
+        toast.success('Заявка отправлена', {
+            position: "bottom-left",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            });
+        reset()
     }
+
     return (
         <section className="contact-form" id='contactUs'>
             <div className="contact-form__container">
                 <div className="about-me__title-wrapper title-wrapper">
-                    <h3 className="about-me__title title">Рассчитать стоимось
+                    <h3 className="about-me__title title">Связаться с нами
                         <span className="object__wrapper-anim"></span>
                     </h3>
                 </div>
@@ -42,12 +59,12 @@ export const ContactUs = () => {
                             <form className="form" onSubmit={handleSubmit(onHandleSubmit)}>
                                 <div className="form__wrapper">
                                     <ContactInput placeholder='Ваше имя' inputName='name' type='text' />
-                                    <ContactInput placeholder='Ваш номер телефона' inputName='number' type='number' />
+                                    <ContactInput placeholder='Ваш номер телефона' inputName='phone' type='number' />
                                 </div>
 
                                 <ContactTextArea 
                                 placeholder='Опишите ваш запрос (приложите ссылку на пример желаемого сайта)'
-                                inputName='description'/>
+                                inputName='message'/>
 
                                 {/* <div className="form__message">
                                     <textarea placeholder="Приложите ссылку на пример желаемого сайта и опишите в кратце что бы вы хотели" name="message" className="input__text"></textarea>

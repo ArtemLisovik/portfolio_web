@@ -22,7 +22,7 @@ export const About = () => {
                         </div>
                     </div>
                     <div className="about-me__descr descr">
-                        <h4 className="descr__title">Реализовываем ваши идеи
+                        <h4 className="descr__title">Реализовываем ваши идеи!
                             <span className="object__wrapper-anim"></span>
                         </h4>
                         <div className="descr__text">

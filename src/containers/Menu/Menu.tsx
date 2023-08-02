@@ -16,7 +16,7 @@ export const Menu = () => {
     const [desktopMenu, setDesktopMenu] = useState(true)
 
     const getWindowSize = () => {
-        if (window.innerWidth < 854) {
+        if (window.innerWidth < 1083) {
             setDesktopMenu(false)
         } else {
             setDesktopMenu(true)
@@ -47,7 +47,6 @@ export const Menu = () => {
 
 export const DesktopMenu = () => {
 
-
     const lang = document.cookie.split('=')[1] as menuType
     const menuList = Object.entries(menuConfig[lang])
     const view = menuList.map((menuItem, index) => {
@@ -61,7 +60,8 @@ export const DesktopMenu = () => {
 
 
     return (
-        <nav className="header__nav">
+        <nav className='header__nav'>
+
             <ul className="header__menu-list1 menu">
 
                 <li className="menu__item">
@@ -87,20 +87,23 @@ export const DesktopMenu = () => {
                         О нас
                     </Link>
                 </li>
-            </ul>
-            <ul className="header__menu-list2 menu">
+
                 <li className="menu__item">
                     <Link
                         to="services"
                         spy={true}
                         smooth={true}
-                        offset={20}
+                        offset={0}
                         duration={0}
                         className="menu__link link">
-                        Наши услуги
+                        Услуги и цены
                     </Link>
                 </li>
+            </ul>
 
+            <Logo/>
+
+            <ul className="header__menu-list2 menu">
 
                 <li className="menu__item">
                     <Link
@@ -151,7 +154,7 @@ const BurgerMenu = () => {
         <div className="burger-menu">
             <Logo/>
             <div className="burger-menu__button">
-                <svg className={`ham ham6 ${menuActive ? 'active' : ''}`} viewBox="0 0 100 100" width="60" onClick={burgerMenuHandler}
+                <svg className={`ham ham6 ${menuActive ? 'active' : ''}`} viewBox="0 0 100 100" width="70" onClick={burgerMenuHandler}
                 >
                     <path
                         className="line top"
@@ -167,10 +170,6 @@ const BurgerMenu = () => {
 
             <AnimatePresence mode='wait'   >
                 <motion.nav
-                    // initial={{maxHeight: '0px'}}
-                    // animate={{maxHeight: '100vh'}}
-                    // exit={{maxHeight: '0px'}}
-                    // transition={{duration: 0.2}}
                     className={`burger-menu__wrapper ${menuActive ? 'active' : ''}`}>
 
                     {menuActive && <div className='burger-menu__inner'>
@@ -225,9 +224,10 @@ const BurgerMenu = () => {
                                 spy={true}
                                 smooth={true}
                                 offset={0}
-                                duration={0}
+                                duration={100}
+                                activeClass='active'
                                 className="burger-menu__link">
-                                Наши услуги
+                                Услуги и цены
                             </Link>
                         </motion.div>
 
@@ -246,7 +246,7 @@ const BurgerMenu = () => {
                                 offset={0}
                                 duration={0}
                                 className="burger-menu__link">
-                                Заказать
+                                Расчитать стоимость
                             </Link>
                         </motion.div>
 

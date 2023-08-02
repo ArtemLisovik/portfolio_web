@@ -3,8 +3,8 @@ import { IData } from "types/IData";
 
 
 export const sendMessageTelegram = async (data: IData) => {
-  const TOKEN = "6271411253:AAHSW62FL43xu4Jz73Q55LGptF2JiAFCFmQ";
-  const CHAT_ID = "-1001855472262";
+  const TOKEN = "6336810146:AAGwxsFvnevVSOXNzZv1cu_E8KdIqw2QSCU";
+  const CHAT_ID = "-1001902457197";
   const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
   let message = `<b>Новая заявка</b>\n`;

@@ -14,6 +14,18 @@
     &__text {
         margin-bottom: 20px;
     }
+
+    &__contacts {
+        display: flex;
+        justify-content: space-around;
+        align-items: start;
+        gap: 30px;
+
+        @media (max-width: 465px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
 }
 
 .footer .title__wrapper-anim {
@@ -85,4 +97,18 @@ footer a {
     height: 30px;
     opacity: 0.5;
     transition: all 0.3s ease-out;
+}
+
+.contacts {
+
+    &__number {
+        
+    }
+    &__tel {
+        display: block;
+    }
+    &__name {
+        margin-bottom: 10px;
+    }
+
 }

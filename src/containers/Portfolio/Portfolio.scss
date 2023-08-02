@@ -73,10 +73,18 @@
 
 .portfolio__element:nth-child(2n+2){
     grid-row: span 7;
+
+    @media (max-width: 550px) {
+        grid-row: span 4;
+        }
 }
 
 .portfolio__element:nth-child(2n+5){
     grid-row: span 5;
+
+    @media (max-width: 550px) {
+        grid-row: span 4;
+        }
 }
 
 .portfolio__element:nth-child(3n+6){
