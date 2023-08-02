@@ -2,38 +2,13 @@ import { Helmet } from "react-helmet"
 import { useTranslation } from "react-i18next"
 
 import './MainPage.scss'
+
 import { Portfolio } from "containers/Portfolio"
 import { About, ContactUs, Footer, Header, Promo, Services, Terms } from "containers"
-import { Button } from "ui"
-import { useEffect, useState } from "react"
 import { Link } from "react-scroll"
 
 export const MainPage = () => {
     const { t } = useTranslation()
-
-    const [mainButtonActive, setMainButtonActive] = useState<Boolean>()
-
-
-
-    const getWindowScroll = () => {
-        if (window.pageYOffset > window.innerHeight) {
-            setMainButtonActive(true)
-        } else {
-            setMainButtonActive(false)
-        }
-    }
-
-    useEffect(() => {
-        getWindowScroll()
-    }, []);
-
-    useEffect(() => {
-        window.addEventListener('scroll', getWindowScroll);
-
-        return () => {
-            window.removeEventListener('scroll', getWindowScroll);
-        };
-    }, []);
 
 
     return (
@@ -47,7 +22,7 @@ export const MainPage = () => {
             <main className="main">
 
 
-                <div className="socials" style={mainButtonActive ? {bottom: '62.5px'} : {bottom: '10px'}}>
+                <div className="socials" style={{bottom: '62.5px'}}>
                     <a href="https://t.me/Artem_lead" className="social__link telegram" target="_blank">
                         <svg width="27px" height="27px" fill="white" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" xmlSpace="preserve" style={{
                             fillRule: 'evenodd',
@@ -75,7 +50,7 @@ export const MainPage = () => {
 
                 </div>
 
-                <div className={`main__button ${mainButtonActive ? 'active' : null}`}>
+                <div className='main__button active'>
                     <Link
                         to="contactUs"
                         spy={true}
@@ -85,7 +60,6 @@ export const MainPage = () => {
                         className="button__main">
                         Рассчитать стоимость
                     </Link>
-                    {/* <Button>Расчитать стоимость</Button> */}
                 </div>
 
                 <Promo />

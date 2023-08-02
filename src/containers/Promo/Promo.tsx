@@ -22,8 +22,8 @@ export const Promo = () => {
                     </h2>
                     <div className="info__subtitle-price">
                         <span className="info__subtitle-price-text">Создание сайтов любой сложности</span>
-                        {/* <div className="info__subtitle-button">Заказать</div> */}
-                        <Link
+                        <span className="info__subtitle-wrapper"></span>
+                        {/* <Link
                             to="contactUs"
                             spy={true}
                             smooth={true}
@@ -31,7 +31,7 @@ export const Promo = () => {
                             duration={0}
                             className="button__main">
                             Заказать сайт
-                        </Link>
+                        </Link> */}
                     </div>
                     
                     <Link
