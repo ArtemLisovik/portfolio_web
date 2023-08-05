@@ -14,8 +14,9 @@ export const MainPage = () => {
     return (
         <>
             <Helmet>
-                <title>Artem Lisovik - Web Developer</title>
-
+                <meta charSet="utf-8" />
+                <title>AL. studio - студия веб-разработки</title>
+                <meta name="description" content="Создание сайтов под ключ"/>
             </Helmet>
 
             <Header />
